@@ -13,15 +13,8 @@ spotify = spotipy.Spotify(auth=spotify_token.get_access_token())
 # Discord Bot function
 @bot.command()
 async def play(ctx, url: str):
-    # check if url is youtube
-    if "youtube" in url:
-        # use youtube-dl to play the audio
-        await ctx.send("Playing Audio from Youtube")
-        await ctx.send("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _")
-        await ctx.send(f"Playing {url}")
-        await ctx.send("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _")
     # check if url is spotify
-    elif "spotify" in url:
+     if "spotify" in url:
         # use spotify API to play the audio
         await ctx.send("Playing Audio from Spotify")
         await ctx.send("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _")
